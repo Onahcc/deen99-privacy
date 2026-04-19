@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Deen360</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      line-height: 1.65;
+      color: #1a1a1a;
+      background: #fafafa;
+    }
+    h1 { color: #0d6e52; font-family: Georgia, serif; margin-bottom: 0.3rem; }
+    h2 { color: #0d6e52; margin-top: 2rem; border-bottom: 1px solid #e0e0e0; padding-bottom: 0.3rem; }
+    h3 { margin-top: 1.3rem; }
+    a { color: #0d6e52; }
+    .last-updated { color: #666; font-size: 14px; margin-bottom: 2rem; }
+    ul { padding-left: 1.4rem; }
+    li { margin-bottom: 0.4rem; }
+    .highlight { background: #f0ebe0; border-left: 3px solid #c9a84c; padding: 0.8rem 1rem; margin: 1rem 0; border-radius: 4px; }
+    .contact { background: #f5f5f5; padding: 1rem 1.2rem; border-radius: 8px; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+
+<h1>Deen360 — Privacy Policy</h1>
+<p class="last-updated">Last updated: April 19, 2026</p>
+
+<p>Deen360 ("the app", "we", "us") is a free Islamic companion app developed by Zeeshan Khan as an independent developer. This policy explains what information the app handles and how your privacy is protected.</p>
+
+<div class="highlight">
+  <strong>Short version:</strong> Deen360 stores your data on your device and in Firebase under your account. We do not sell your data, we do not serve ads, and we do not track you across other apps or services.
+</div>
+
+<h2>1. Information We Collect</h2>
+
+<h3>Location data</h3>
+<p>If you grant location permission, the app uses your device's GPS coordinates to calculate accurate prayer times and Qibla direction. Your approximate location is also used to detect your country so appropriate regional prayer calculation methods are applied automatically.</p>
+<ul>
+  <li>GPS coordinates are processed on your device and briefly sent to OpenStreetMap's Nominatim service to resolve your city name. See the <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">OpenStreetMap privacy policy</a> for their practices.</li>
+  <li>Your location is not sent to our servers and is not shared with advertisers.</li>
+</ul>
+
+<h3>Account information (optional)</h3>
+<p>If you choose to sign in with Google, we receive the following from your Google account via Firebase Authentication:</p>
+<ul>
+  <li>Your display name</li>
+  <li>Your email address</li>
+  <li>Your profile picture URL</li>
+  <li>A unique user ID assigned by Google</li>
+</ul>
+<p>You can continue to use Deen360 as a guest without signing in. Guest data is stored only on your device.</p>
+
+<h3>App data you create</h3>
+<p>When signed in, the following data you create or configure in the app is synced to Google Firebase (Firestore) under your account so you can access it across devices:</p>
+<ul>
+  <li>Your theme preference (light/dark)</li>
+  <li>Your notification settings (which prayers to alert for)</li>
+  <li>Your tasbih counts and custom tasbeeh lists</li>
+  <li>Your Qaza prayer tracker</li>
+  <li>Your prayer journal entries and mood log</li>
+  <li>Ramadan mode preference</li>
+</ul>
+<p>Guest users' data is stored only in the device's local storage and never leaves the device.</p>
+
+<h3>Error and performance data</h3>
+<p>To help us identify and fix bugs, Deen360 uses <a href="https://sentry.io" target="_blank" rel="noopener">Sentry</a>, a third-party error tracking service. When the app encounters an error, the following information is sent to Sentry:</p>
+<ul>
+  <li>Error message and technical stack trace</li>
+  <li>App version, device model, and Android version</li>
+  <li>An anonymous user ID (your Firebase UID if signed in, or "guest" — <strong>never</strong> your email or name)</li>
+  <li>A recent activity breadcrumb (e.g., "user switched to Tasbih tab") to help us understand what led to the error</li>
+</ul>
+<p>We do <strong>not</strong> send your prayer journal contents, your location, your photos, or anything you type into the app. See the <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">Sentry privacy policy</a> for their practices.</p>
+
+<h2>2. Information We Do NOT Collect</h2>
+<ul>
+  <li>We do not collect or store your browsing history on other apps or websites.</li>
+  <li>We do not use advertising identifiers.</li>
+  <li>We do not share your information with advertisers.</li>
+  <li>We do not sell your data to anyone, ever.</li>
+  <li>We do not access your contacts, camera, microphone, or SMS.</li>
+</ul>
+
+<h2>3. Permissions Deen360 Requests</h2>
+<ul>
+  <li><strong>Location</strong> — Required to calculate accurate prayer times and Qibla direction for your area. You can deny this and enter a location manually if you prefer.</li>
+  <li><strong>Notifications</strong> — Required to send prayer time alerts.</li>
+  <li><strong>Ignore Battery Optimizations</strong> — Requested so Android does not delay prayer notifications. Prayer apps are a recognized use case for this permission.</li>
+  <li><strong>Exact Alarms</strong> — Required to schedule notifications at the exact prayer time (not approximate).</li>
+  <li><strong>Internet</strong> — Used to sync your data if you're signed in, and to resolve your city name for display.</li>
+</ul>
+
+<h2>4. Third-Party Services</h2>
+<p>Deen360 uses the following third-party services. Each has its own privacy policy:</p>
+<ul>
+  <li><strong>Google Firebase (Authentication &amp; Firestore)</strong> — Stores your account and synced app data. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a></li>
+  <li><strong>Google Sign-In</strong> — Used for account creation and login. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy</a></li>
+  <li><strong>Sentry</strong> — Error and crash tracking. <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">Sentry Privacy</a></li>
+  <li><strong>OpenStreetMap Nominatim</strong> — Converts GPS coordinates to city names. <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">OSMF Privacy</a></li>
+</ul>
+
+<h2>5. Data Retention &amp; Deletion</h2>
+<p>Your data is retained as long as you have an account. You can delete your data at any time:</p>
+<ul>
+  <li><strong>Guest data:</strong> Uninstalling the app removes all local data.</li>
+  <li><strong>Signed-in data:</strong> Signing out removes your local journal data. To permanently delete your cloud data, email us (see contact section) with a request to delete your account — we will delete all your Firestore data within 30 days.</li>
+  <li><strong>Error data in Sentry:</strong> Automatically deleted after 90 days under Sentry's default retention policy.</li>
+</ul>
+
+<h2>6. Children's Privacy</h2>
+<p>Deen360 does not knowingly collect information from children under 13. Parents who believe their child's data may have been collected can contact us to request deletion.</p>
+
+<h2>7. Security</h2>
+<p>We rely on Google Firebase's security infrastructure to protect your account data. Data in transit is encrypted (HTTPS). However, no method of transmission over the internet is 100% secure — we make reasonable efforts but cannot guarantee absolute security.</p>
+
+<h2>8. Your Rights</h2>
+<p>You have the right to:</p>
+<ul>
+  <li>Access the data we hold about you</li>
+  <li>Request correction of inaccurate data</li>
+  <li>Request deletion of your data</li>
+  <li>Withdraw consent at any time by uninstalling the app or signing out</li>
+</ul>
+
+<h2>9. Changes to This Policy</h2>
+<p>If we update this policy, we will change the "Last updated" date at the top and, for material changes, we will notify users through the app. Continued use of the app after changes means you accept the updated policy.</p>
+
+<div class="contact">
+  <h2 style="margin-top:0">10. Contact</h2>
+  <p>For privacy questions, data deletion requests, or any other concerns about this policy:</p>
+  <p><strong>Developer:</strong> Zeeshan Khan<br>
+  <strong>Email:</strong> <a href="mailto:zeeshankhaun@gmail.com">zeeshankhaun@gmail.com</a><br>
+  <strong>Location:</strong> Peshawar, Pakistan</p>
+</div>
+
+</body>
+</html>
