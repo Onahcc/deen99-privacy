@@ -1,2 +1,2 @@
-# deen360-privacy
-Privacy policy for Deen360 Islamic app
+# deen99-privacy
+Privacy policy for Deen99 Islamic app
