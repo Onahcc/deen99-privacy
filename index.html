@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- saved from url=(0054)file:///C:/Users/Zeeshan/Downloads/privacy_policy.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deen99 — Privacy Policy</title>
+<title>Deen99 - Privacy Policy</title>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:#f7f4ee;color:#1a1a1a;line-height:1.7;font-size:15px}
@@ -19,7 +19,7 @@
   p{margin-bottom:12px;color:#2a2a2a}
   ul{margin:8px 0 16px 0;padding-left:0;list-style:none}
   ul li{padding:4px 0 4px 22px;position:relative;color:#2a2a2a;font-size:15px}
-  ul li::before{content:"•";position:absolute;left:6px;color:#0d6e52;font-weight:700}
+  ul li::before{content:"\2022";position:absolute;left:6px;color:#0d6e52;font-weight:700}
   a{color:#0d6e52;text-decoration:underline;text-underline-offset:2px}
   a:hover{color:#1a9e75}
   .contact-block{background:#fff;border:1px solid #e0d9c8;border-radius:12px;padding:20px 24px;margin-top:12px}
@@ -36,51 +36,64 @@
   <div class="header">
     <div class="app-name">Deen99</div>
     <div class="policy-title">Privacy Policy</div>
-    <div class="last-updated">Last updated: April 24, 2026</div>
+    <div class="last-updated">Last updated: May 3, 2026</div>
     <p>Deen99 ("the app", "we", "us") is a free Islamic companion app developed by <strong>Zeeshan Khan</strong> as an independent developer. This policy explains what information the app handles and how your privacy is protected.</p>
-    <div class="short-version"><strong>📋 Short version:</strong> Deen99 stores your data on your device and in Firebase under your account. We do not sell your data and we do not track you across other apps or services.</div>
+    <div class="short-version"><strong>Short version:</strong> Deen99 stores app data on your device and, if you sign in, syncs selected data to Firebase under your account. We do not sell your data, use advertising identifiers, or track you across other apps or services.</div>
   </div>
 
   <h2>1. Information We Collect</h2>
 
   <h3>Location data</h3>
-  <p>If you grant location permission, the app uses your device's GPS coordinates to calculate accurate prayer times and Qibla direction. Your approximate location is also used to detect your country so appropriate regional prayer calculation methods are applied automatically.</p>
+  <p>If you grant location permission, the app uses your device's GPS coordinates to calculate accurate prayer times and Qibla direction. Your approximate location may also be used to detect your country so regional prayer calculation methods can be applied automatically.</p>
   <ul>
-    <li>GPS coordinates are processed on your device and briefly sent to <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank">OpenStreetMap's Nominatim service</a> to resolve your city name.</li>
-    <li>Your location is not sent to our servers and is not shared with any third parties for advertising or tracking purposes.</li>
+    <li>GPS coordinates are processed on your device for prayer time and Qibla calculations.</li>
+    <li>GPS coordinates may be briefly sent to <a href="https://operations.osmfoundation.org/policies/nominatim/" target="_blank">OpenStreetMap's Nominatim service</a> to resolve your city name for display.</li>
+    <li>If you search for a city manually, your search query is sent to Nominatim to find matching places.</li>
+    <li>Your location is not sent to our own servers. It is shared with Nominatim only when needed for city lookup, and is not shared with any third parties for advertising or tracking purposes.</li>
   </ul>
 
   <h3>Account information (optional)</h3>
-  <p>If you choose to sign in with Google, we receive the following from your Google account via Firebase Authentication:</p>
+  <p>If you choose to sign in with Google, we receive the following from your Google account through Google Sign-In and Firebase Authentication:</p>
   <ul>
     <li>Your display name</li>
     <li>Your email address</li>
     <li>Your profile picture URL</li>
-    <li>A unique user ID assigned by Google</li>
+    <li>A unique user ID assigned by Google/Firebase</li>
   </ul>
-  <p>You can continue to use Deen99 as a guest without signing in. <strong>Guest data is stored only on your device.</strong></p>
+  <p>You can continue to use Deen99 as a guest without signing in. Guest data is stored only on your device unless you later sign in and choose to use synced features.</p>
 
-  <h3>App data you create</h3>
+  <h3>App data you create or configure</h3>
   <p>When signed in, the following data you create or configure in the app is synced to Google Firebase (Firestore) under your account so you can access it across devices:</p>
   <ul>
-    <li>Your theme preference (light/dark)</li>
-    <li>Your notification settings (which prayers to alert for)</li>
+    <li>Your selected app theme and prayer calculation preferences</li>
+    <li>Your notification settings, including which prayers to alert for</li>
     <li>Your tasbih counts and custom tasbeeh lists</li>
-    <li>Your Qaza prayer tracker</li>
+    <li>Your Qaza prayer tracker settings</li>
     <li>Your prayer journal entries and mood log</li>
-    <li>Ramadan mode preference</li>
+    <li>Your Ramadan mode preference</li>
   </ul>
-  <p>Guest users' data is stored only in the device's local storage and <strong>never leaves the device.</strong></p>
+  <p>Some app data is stored locally on your device and may not be synced, such as onboarding state, cached Quran Surahs, cached or manual location choices, daily goals, custom duas, and local preferences. Guest users' app data is stored in the device's local storage and native preferences.</p>
+
+  <h3>Quran content requests</h3>
+  <p>When you open a Surah in the Quran reader, Deen99 may request Quran text and translation from external Quran content APIs. The request includes the Surah number being opened. Like any internet request, those providers may receive standard technical information such as your IP address and browser/device network details.</p>
 
   <h3>Error and performance data</h3>
-  <p>To help us identify and fix bugs, Deen99 uses <a href="https://sentry.io/" target="_blank">Sentry</a>, a third-party error tracking service. When the app encounters an error, the following information is sent to Sentry:</p>
+  <p>To help us identify and fix bugs, Deen99 uses <a href="https://sentry.io/" target="_blank">Sentry</a>, a third-party error tracking service. When the app encounters an error, the following information may be sent to Sentry:</p>
   <ul>
     <li>Error message and technical stack trace</li>
-    <li>App version, device model, and Android version</li>
-    <li>An anonymous user ID (your Firebase UID if signed in, or "guest" — <strong>never</strong> your email or name)</li>
-    <li>A recent activity breadcrumb (e.g., "user switched to Tasbih tab") to help us understand what led to the error</li>
+    <li>App release, device/browser details, and operating system information</li>
+    <li>A pseudonymous user identifier, such as your Firebase UID if signed in, or "guest" if not signed in</li>
+    <li>Recent activity breadcrumbs, such as "user switched to Tasbih tab", to help us understand what led to the error</li>
   </ul>
-  <p>We do <strong>not</strong> send your prayer journal contents, your location, your photos, or anything you type into the app. See the <a href="https://sentry.io/privacy/" target="_blank">Sentry privacy policy</a> for their practices.</p>
+  <p>We do <strong>not</strong> intentionally send your prayer journal contents, your typed notes, your exact location, your photos, your contacts, or your email address to Sentry. See the <a href="https://sentry.io/privacy/" target="_blank">Sentry privacy policy</a> for their practices.</p>
+
+  <h3>Optional support payments</h3>
+  <p>Deen99 includes an optional "Support Deen99" section that displays developer bank/contact details for users who want to voluntarily support app development. The app itself does not process payments, collect card details, collect bank login details, or confirm whether a payment was made.</p>
+  <ul>
+    <li>If you choose to send support through your bank, wallet, or payment app, that transaction is handled by your own bank/payment provider under its privacy practices.</li>
+    <li>We may see normal transaction details made available by the receiving bank, such as sender name, amount, reference, date, or account/payment identifier, depending on how your payment provider sends the transfer.</li>
+    <li>Support payments are voluntary and do not unlock premium features, rewards, badges, or additional app content.</li>
+  </ul>
 
   <hr class="divider">
 
@@ -88,51 +101,62 @@
   <ul>
     <li>We do not collect or store your browsing history on other apps or websites.</li>
     <li>We do not use advertising identifiers.</li>
+    <li>We do not show personalized ads.</li>
     <li>We do not sell your data to anyone, ever.</li>
-    <li>We do not access your contacts, camera, microphone, or SMS.</li>
+    <li>We do not access your contacts, camera, microphone, SMS, or call logs.</li>
+    <li>We do not collect payment card details, bank login details, or in-app payment credentials.</li>
   </ul>
 
   <hr class="divider">
 
   <h2>3. Permissions Deen99 Requests</h2>
   <ul>
-    <li><strong>Location</strong> — Required to calculate accurate prayer times and Qibla direction for your area. You can deny this and enter a location manually if you prefer.</li>
-    <li><strong>Notifications</strong> — Required to send prayer time alerts.</li>
-    <li><strong>Ignore Battery Optimizations</strong> — Requested so Android does not delay prayer notifications. Prayer apps are a recognised use case for this permission.</li>
-    <li><strong>Exact Alarms</strong> — Required to schedule notifications at the exact prayer time (not approximate).</li>
-    <li><strong>Internet</strong> — Used to sync your data if you're signed in, and to resolve your city name for display.</li>
+    <li><strong>Location</strong> - Used to calculate accurate prayer times and Qibla direction for your area. You can deny this and enter a location manually if you prefer.</li>
+    <li><strong>Notifications</strong> - Used to send prayer time alerts.</li>
+    <li><strong>Exact Alarms</strong> - Used to schedule notifications at the exact prayer time, not an approximate time.</li>
+    <li><strong>Battery optimization settings</strong> - The app may show guidance or open Android battery settings so you can optionally allow more reliable prayer notifications. This is not required by default.</li>
+    <li><strong>Internet</strong> - Used to sync your data if you're signed in, resolve city names, search manual locations, load Quran content, and send crash reports.</li>
+    <li><strong>Device orientation/sensors</strong> - Used for the Qibla compass where supported. Sensor readings are used on the device and are not stored by us.</li>
+    <li><strong>Clipboard</strong> - Used only when you tap a copy button, such as copying support payment details. Clipboard contents are not read or uploaded by the app.</li>
   </ul>
 
   <hr class="divider">
 
   <h2>4. Third-Party Services</h2>
-  <p>Deen99 uses the following third-party services. Each has its own privacy policy:</p>
+  <p>Deen99 uses the following third-party services. Each has its own privacy practices:</p>
   <ul>
-    <li><strong>Google Firebase (Authentication &amp; Firestore)</strong> — Stores your account and synced app data. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a></li>
-    <li><strong>Google Sign-In</strong> — Used for account creation and login. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy</a></li>
-    <li><strong>Sentry</strong> — Error and crash tracking. <a href="https://sentry.io/privacy/" target="_blank">Sentry Privacy</a></li>
-    <li><strong>OpenStreetMap Nominatim</strong> — Converts GPS coordinates to city names. <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank">OSMF Privacy</a></li>
+    <li><strong>Google Firebase Authentication</strong> - Provides account login and authentication. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a></li>
+    <li><strong>Google Cloud Firestore</strong> - Stores synced app data for signed-in users. <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a></li>
+    <li><strong>Google Sign-In</strong> - Used for account creation and login. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy</a></li>
+    <li><strong>Sentry</strong> - Error and crash tracking. <a href="https://sentry.io/privacy/" target="_blank">Sentry Privacy</a></li>
+    <li><strong>OpenStreetMap Nominatim</strong> - Converts GPS coordinates or manual search queries into city/location names. <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank">OSMF Privacy</a></li>
+    <li><strong>AlQuran Cloud</strong> - Provides Quran Arabic text and English translation for the Quran reader. <a href="https://alquran.cloud/privacy" target="_blank">AlQuran Cloud Privacy</a></li>
+    <li><strong>QuranAPI Pages</strong> - Used as a fallback Quran content source if the primary Quran API is unavailable. <a href="https://quranapi.pages.dev/" target="_blank">QuranAPI Pages</a></li>
+    <li><strong>Your bank, wallet, or payment provider</strong> - Used only if you voluntarily send support outside the app. Deen99 does not control those providers' privacy practices.</li>
   </ul>
 
   <hr class="divider">
 
   <h2>5. Data Retention &amp; Deletion</h2>
-  <p>Your data is retained as long as you have an account. You can delete your data at any time:</p>
+  <p>Your data is retained as long as needed to provide the app's features or until you delete it. You can delete your data as follows:</p>
   <ul>
-    <li><strong>Guest data:</strong> Uninstalling the app removes all local data.</li>
-    <li><strong>Signed-in data:</strong> Signing out removes your local journal data. To permanently delete your cloud data, email us (see contact section) with a request to delete your account — we will delete all your Firestore data within 30 days.</li>
-    <li><strong>Error data in Sentry:</strong> Automatically deleted after 90 days under Sentry's default retention policy.</li>
+    <li><strong>Guest data:</strong> Uninstalling the app generally removes local app data. Some Android devices may keep certain native preference values depending on device backup or OEM behavior.</li>
+    <li><strong>Signed-in local data:</strong> Signing out removes locally cached journal entries for that signed-in account from the device.</li>
+    <li><strong>Signed-in cloud data:</strong> To permanently delete your Firebase/Firestore data, email us using the contact information below. We will delete your cloud data within 30 days.</li>
+    <li><strong>Journal entries:</strong> You can delete individual journal entries inside the app.</li>
+    <li><strong>Cached Quran/location data:</strong> These are stored locally to make the app faster and reduce repeated network requests, and can be removed by clearing app data or uninstalling the app.</li>
+    <li><strong>Error data in Sentry:</strong> Error reports are retained according to Sentry project settings and are intended only for debugging and app reliability.</li>
   </ul>
 
   <hr class="divider">
 
   <h2>6. Children's Privacy</h2>
-  <p>Deen99 does not knowingly collect information from children under 13. Parents who believe their child's data may have been collected can contact us to request deletion.</p>
+  <p>Deen99 does not knowingly collect personal information from children under 13. Parents or guardians who believe their child's data may have been collected can contact us to request deletion.</p>
 
   <hr class="divider">
 
   <h2>7. Security</h2>
-  <p>We rely on Google Firebase's security infrastructure to protect your account data. Data in transit is encrypted (HTTPS). However, no method of transmission over the internet is 100% secure — we make reasonable efforts but cannot guarantee absolute security.</p>
+  <p>We rely on Google Firebase's security infrastructure to help protect signed-in account data. Data in transit is encrypted using HTTPS. However, no method of transmission or storage over the internet is 100% secure, so we cannot guarantee absolute security.</p>
 
   <hr class="divider">
 
@@ -142,13 +166,13 @@
     <li>Access the data we hold about you</li>
     <li>Request correction of inaccurate data</li>
     <li>Request deletion of your data</li>
-    <li>Withdraw consent at any time by uninstalling the app or signing out</li>
+    <li>Withdraw consent by signing out, disabling permissions, clearing app data, or uninstalling the app</li>
   </ul>
 
   <hr class="divider">
 
   <h2>9. Changes to This Policy</h2>
-  <p>If we update this policy, we will change the "Last updated" date at the top and, for material changes, we will notify users through the app. Continued use of the app after changes means you accept the updated policy.</p>
+  <p>If we update this policy, we will change the "Last updated" date at the top and, for material changes, we will notify users through the app or another reasonable method. Continued use of the app after changes means you accept the updated policy.</p>
 
   <hr class="divider">
 
@@ -161,6 +185,5 @@
   </div>
 
 </div>
-
-
-</body></html>
+</body>
+</html>
