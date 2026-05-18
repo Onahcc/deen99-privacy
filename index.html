@@ -36,7 +36,7 @@
   <div class="header">
     <div class="app-name">Deen99</div>
     <div class="policy-title">Privacy Policy</div>
-    <div class="last-updated">Last updated: May 18, 2026</div>
+    <div class="last-updated">Last updated: May 19, 2026</div>
     <p>Deen99 ("the app", "we", "us") is a free Islamic companion app developed by <strong>Zeeshan Khan</strong> as an independent developer. This policy explains what information the app handles and how your privacy is protected.</p>
     <div class="short-version"><strong>Short version:</strong> Deen99 stores app data on your device and, if you sign in, syncs selected data to Firebase under your account. We do not sell your data, use advertising identifiers, or track you across other apps or services.</div>
   </div>
@@ -72,7 +72,7 @@
     <li>Your prayer journal entries and mood log</li>
     <li>Your Ramadan mode preference</li>
   </ul>
-  <p>Some app data is stored locally on your device and may not be synced, such as onboarding state, cached Quran Surahs, cached or manual location choices, daily goals, custom duas, and local preferences. Guest users' app data is stored in the device's local storage and native preferences.</p>
+  <p>Some app data is stored locally on your device and may not be synced, such as onboarding state, cached Quran Surahs, cached or manual location choices, daily goals, custom duas, your Reliable Alerts Mode on/off choice, and local preferences. Guest users' app data is stored in the device's local storage and native preferences.</p>
 
   <h3>Quran content requests</h3>
   <p>When you open a Surah in the Quran reader, Deen99 may request Quran text and translation from external Quran content APIs. The request includes the Surah number being opened. Like any internet request, those providers may receive standard technical information such as your IP address and browser/device network details.</p>
@@ -107,6 +107,8 @@
     <li><strong>Notifications</strong> - Used to send prayer time alerts.</li>
     <li><strong>Exact Alarms</strong> - Used to schedule notifications at the exact prayer time, not an approximate time.</li>
     <li><strong>Battery optimization settings</strong> - The app may show guidance or open Android battery settings so you can optionally allow more reliable prayer notifications. This is not required by default.</li>
+    <li><strong>Foreground service &amp; ongoing notification (optional, off by default)</strong> - If you turn on the optional <strong>"Reliable Alerts Mode"</strong> inside the app, Deen99 runs an Android foreground service that keeps a permanent low-priority notification visible. This is used only to keep prayer-time alerts firing on time on phones with aggressive battery-saving or background-app restrictions. The ongoing notification displays only the next upcoming prayer's name and time. The service runs entirely on your device, performs no network activity, and does not collect, read, or transmit any personal data. It restarts after a device reboot only while this mode stays enabled, and you can turn it off at any time from inside the app or by tapping "Stop" on the notification.</li>
+    <li><strong>Run after device restart / keep device awake briefly</strong> - Used so that, if you have enabled Reliable Alerts Mode, scheduled prayer alerts can resume after the phone restarts and fire at the exact time. These are used only for prayer-alert scheduling and not for any background data collection.</li>
     <li><strong>Internet</strong> - Used to sync your data if you're signed in, resolve city names, search manual locations, load Quran content, and send crash reports.</li>
     <li><strong>Device orientation/sensors</strong> - Used for the Qibla compass where supported. Sensor readings are used on the device and are not stored by us.</li>
     <li><strong>Clipboard</strong> - Used only when you tap a copy button, such as copying Hadith text or an app link. Clipboard contents are not read or uploaded by the app.</li>
@@ -178,4 +180,3 @@
 </div>
 </body>
 </html>
-
