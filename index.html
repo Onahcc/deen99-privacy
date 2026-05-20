@@ -36,7 +36,7 @@
   <div class="header">
     <div class="app-name">Deen99</div>
     <div class="policy-title">Privacy Policy</div>
-    <div class="last-updated">Last updated: May 19, 2026</div>
+    <div class="last-updated">Last updated: May 21, 2026</div>
     <p>Deen99 ("the app", "we", "us") is a free Islamic companion app developed by <strong>Zeeshan Khan</strong> as an independent developer. This policy explains what information the app handles and how your privacy is protected.</p>
     <div class="short-version"><strong>Short version:</strong> Deen99 stores app data on your device and, if you sign in, syncs selected data to Firebase under your account. We do not sell your data, use advertising identifiers, or track you across other apps or services.</div>
   </div>
@@ -65,14 +65,14 @@
   <h3>App data you create or configure</h3>
   <p>When signed in, the following data you create or configure in the app is synced to Google Firebase (Firestore) under your account so you can access it across devices:</p>
   <ul>
-    <li>Your selected app theme and prayer calculation preferences</li>
+    <li>Your selected app theme, prayer calculation preferences, and Asr method preference</li>
     <li>Your notification settings, including which prayers to alert for</li>
     <li>Your tasbih counts and custom tasbeeh lists</li>
     <li>Your Qaza prayer tracker settings</li>
-    <li>Your prayer journal entries and mood log</li>
+    <li>Your prayer tracker entries, including marked prayers, focus/mood selection, and optional notes you type</li>
     <li>Your Ramadan mode preference</li>
   </ul>
-  <p>Some app data is stored locally on your device and may not be synced, such as onboarding state, cached Quran Surahs, cached or manual location choices, daily goals, custom duas, your Reliable Alerts Mode on/off choice, and local preferences. Guest users' app data is stored in the device's local storage and native preferences.</p>
+  <p>Some app data is stored locally on your device and may not be synced, such as onboarding state, cached Quran Surahs, Quran bookmarks and continue-reading state, cached or manual location choices, daily goals, custom duas, your Reliable Alerts Mode on/off choice, and local preferences. Guest users' app data is stored in the device's local storage and native preferences.</p>
 
   <h3>Quran content requests</h3>
   <p>When you open a Surah in the Quran reader, Deen99 may request Quran text and translation from external Quran content APIs. The request includes the Surah number being opened. Like any internet request, those providers may receive standard technical information such as your IP address and browser/device network details.</p>
@@ -85,7 +85,7 @@
     <li>A pseudonymous user identifier, such as your Firebase UID if signed in, or "guest" if not signed in</li>
     <li>Recent activity breadcrumbs, such as "user switched to Tasbih tab", to help us understand what led to the error</li>
   </ul>
-  <p>We do <strong>not</strong> intentionally send your prayer journal contents, your typed notes, your exact location, your photos, your contacts, or your email address to Sentry. See the <a href="https://sentry.io/privacy/" target="_blank">Sentry privacy policy</a> for their practices.</p>
+  <p>We do <strong>not</strong> intentionally send your prayer tracker notes, your typed duas, your exact location, your photos, your contacts, or your email address to Sentry. See the <a href="https://sentry.io/privacy/" target="_blank">Sentry privacy policy</a> for their practices.</p>
 
   <hr class="divider">
 
@@ -104,11 +104,12 @@
   <h2>3. Permissions Deen99 Requests</h2>
   <ul>
     <li><strong>Location</strong> - Used to calculate accurate prayer times and Qibla direction for your area. You can deny this and enter a location manually if you prefer.</li>
-    <li><strong>Notifications</strong> - Used to send prayer time alerts.</li>
+    <li><strong>Notifications</strong> - Used to send prayer time alerts and optional prayer-tracker reminders.</li>
     <li><strong>Exact Alarms</strong> - Used to schedule notifications at the exact prayer time, not an approximate time.</li>
+    <li><strong>Vibration</strong> - Used only for notification alerts if vibration is enabled by the device or notification channel.</li>
     <li><strong>Battery optimization settings</strong> - The app may show guidance or open Android battery settings so you can optionally allow more reliable prayer notifications. This is not required by default.</li>
     <li><strong>Foreground service &amp; ongoing notification (optional, off by default)</strong> - If you turn on the optional <strong>"Reliable Alerts Mode"</strong> inside the app, Deen99 runs an Android foreground service that keeps a permanent low-priority notification visible. This is used only to keep prayer-time alerts firing on time on phones with aggressive battery-saving or background-app restrictions. The ongoing notification displays only the next upcoming prayer's name and time. The service runs entirely on your device, performs no network activity, and does not collect, read, or transmit any personal data. It restarts after a device reboot only while this mode stays enabled, and you can turn it off at any time from inside the app or by tapping "Stop" on the notification.</li>
-    <li><strong>Run after device restart / keep device awake briefly</strong> - Used so that, if you have enabled Reliable Alerts Mode, scheduled prayer alerts can resume after the phone restarts and fire at the exact time. These are used only for prayer-alert scheduling and not for any background data collection.</li>
+    <li><strong>Run after device restart / keep device awake briefly</strong> - Used so scheduled prayer alerts can resume after the phone restarts, after app updates, or after time/timezone changes, and so alerts can fire at the exact time. These are used only for prayer-alert scheduling and not for any background data collection.</li>
     <li><strong>Internet</strong> - Used to sync your data if you're signed in, resolve city names, search manual locations, load Quran content, and send crash reports.</li>
     <li><strong>Device orientation/sensors</strong> - Used for the Qibla compass where supported. Sensor readings are used on the device and are not stored by us.</li>
     <li><strong>Clipboard</strong> - Used only when you tap a copy button, such as copying Hadith text or an app link. Clipboard contents are not read or uploaded by the app.</li>
@@ -134,10 +135,10 @@
   <p>Your data is retained as long as needed to provide the app's features or until you delete it. You can delete your data as follows:</p>
   <ul>
     <li><strong>Guest data:</strong> Uninstalling the app generally removes local app data. Some Android devices may keep certain native preference values depending on device backup or OEM behavior.</li>
-    <li><strong>Signed-in local data:</strong> Signing out removes locally cached journal entries for that signed-in account from the device.</li>
+    <li><strong>Signed-in local data:</strong> Signing out removes locally cached prayer tracker entries for that signed-in account from the device.</li>
     <li><strong>Signed-in cloud data:</strong> To permanently delete your Firebase/Firestore data, email us using the contact information below. We will delete your cloud data within 30 days.</li>
-    <li><strong>Journal entries:</strong> You can delete individual journal entries inside the app.</li>
-    <li><strong>Cached Quran/location data:</strong> These are stored locally to make the app faster and reduce repeated network requests, and can be removed by clearing app data or uninstalling the app.</li>
+    <li><strong>Prayer tracker entries:</strong> You can delete individual tracker entries inside the app.</li>
+    <li><strong>Cached Quran/location data, Quran bookmarks, custom duas, and daily goals:</strong> These are stored locally to make the app faster and keep your preferences available, and can be removed by clearing app data or uninstalling the app.</li>
     <li><strong>Error data in Sentry:</strong> Error reports are retained according to Sentry project settings and are intended only for debugging and app reliability.</li>
   </ul>
 
