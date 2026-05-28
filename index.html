@@ -36,7 +36,7 @@
   <div class="header">
     <div class="app-name">Deen99</div>
     <div class="policy-title">Privacy Policy</div>
-    <div class="last-updated">Last updated: May 21, 2026</div>
+    <div class="last-updated">Last updated: May 28, 2026</div>
     <p>Deen99 ("the app", "we", "us") is a free Islamic companion app developed by <strong>Zeeshan Khan</strong> as an independent developer. This policy explains what information the app handles and how your privacy is protected.</p>
     <div class="short-version"><strong>Short version:</strong> Deen99 stores app data on your device and, if you sign in, syncs selected data to Firebase under your account. We do not sell your data, use advertising identifiers, or track you across other apps or services.</div>
   </div>
@@ -74,8 +74,14 @@
   </ul>
   <p>Some app data is stored locally on your device and may not be synced, such as onboarding state, cached Quran Surahs, Quran bookmarks and continue-reading state, cached or manual location choices, daily goals, custom duas, your Reliable Alerts Mode on/off choice, and local preferences. Guest users' app data is stored in the device's local storage and native preferences.</p>
 
-  <h3>Quran content requests</h3>
-  <p>When you open a Surah in the Quran reader, Deen99 may request Quran text and translation from external Quran content APIs. The request includes the Surah number being opened. Like any internet request, those providers may receive standard technical information such as your IP address and browser/device network details.</p>
+  <h3>Quran content</h3>
+  <p>The Arabic Quran text and the English translation are <strong>bundled inside the app</strong> and load entirely offline — no network request is made to read the Quran. The app only makes a network request in the following cases:</p>
+  <ul>
+    <li><strong>Audio recitation:</strong> When you tap play on an ayah, the app streams the ayah-by-ayah recitation (Al-Afasy) from the Islamic.network CDN. Audio that has been streamed may be cached on your device for offline replay.</li>
+    <li><strong>Istiadhah audio:</strong> If the istiadhah (audhubillah) intro is enabled, the app streams it from everyayah.com before the recitation begins.</li>
+    <li><strong>Rare text fallback:</strong> In the very unlikely event that the bundled Quran data fails to load (e.g. corrupted install), the app falls back to fetching the Surah text from AlQuran Cloud, and if that fails, from QuranAPI Pages. In normal use this fallback is never triggered.</li>
+  </ul>
+  <p>For all of the above, the request includes the Surah/ayah number being opened, and the third-party host may receive standard technical information such as your IP address and browser/device network details. None of these requests carry account information, location, or any other personal data.</p>
 
   <h3>Error and performance data</h3>
   <p>To help us identify and fix bugs, Deen99 uses <a href="https://sentry.io/" target="_blank">Sentry</a>, a third-party error tracking service. When the app encounters an error, the following information may be sent to Sentry:</p>
@@ -110,6 +116,7 @@
     <li><strong>Battery optimization settings</strong> - The app may show guidance or open Android battery settings so you can optionally allow more reliable prayer notifications. This is not required by default.</li>
     <li><strong>Foreground service &amp; ongoing notification (optional, off by default)</strong> - If you turn on the optional <strong>"Reliable Alerts Mode"</strong> inside the app, Deen99 runs an Android foreground service that keeps a permanent low-priority notification visible. This is used only to keep prayer-time alerts firing on time on phones with aggressive battery-saving or background-app restrictions. The ongoing notification displays only the next upcoming prayer's name and time. The service runs entirely on your device, performs no network activity, and does not collect, read, or transmit any personal data. It restarts after a device reboot only while this mode stays enabled, and you can turn it off at any time from inside the app or by tapping "Stop" on the notification.</li>
     <li><strong>Run after device restart / keep device awake briefly</strong> - Used so scheduled prayer alerts can resume after the phone restarts, after app updates, or after time/timezone changes, and so alerts can fire at the exact time. These are used only for prayer-alert scheduling and not for any background data collection.</li>
+    <li><strong>Full-screen prayer alerts</strong> - On Android 14 and above, Deen99 uses the full-screen-intent permission to show the prayer-time adhan notification as a heads-up alert on the lock screen, the same way a phone alarm does. This is used only for the five daily prayer alerts and never for marketing or non-prayer content. You can disable individual prayer alerts inside the app or revoke notifications system-wide in Android Settings.</li>
     <li><strong>Internet</strong> - Used to sync your data if you're signed in, resolve city names, search manual locations, load Quran content, and send crash reports.</li>
     <li><strong>Device orientation/sensors</strong> - Used for the Qibla compass where supported. Sensor readings are used on the device and are not stored by us.</li>
     <li><strong>Clipboard</strong> - Used only when you tap a copy button, such as copying Hadith text or an app link. Clipboard contents are not read or uploaded by the app.</li>
@@ -125,8 +132,10 @@
     <li><strong>Google Sign-In</strong> - Used for account creation and login. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy</a></li>
     <li><strong>Sentry</strong> - Error and crash tracking. <a href="https://sentry.io/privacy/" target="_blank">Sentry Privacy</a></li>
     <li><strong>OpenStreetMap Nominatim</strong> - Converts GPS coordinates or manual search queries into city/location names. <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank">OSMF Privacy</a></li>
-    <li><strong>AlQuran Cloud</strong> - Provides Quran Arabic text and English translation for the Quran reader. <a href="https://alquran.cloud/privacy" target="_blank">AlQuran Cloud Privacy</a></li>
-    <li><strong>QuranAPI Pages</strong> - Used as a fallback Quran content source if the primary Quran API is unavailable. <a href="https://quranapi.pages.dev/" target="_blank">QuranAPI Pages</a></li>
+    <li><strong>Islamic.network CDN</strong> - Streams ayah-by-ayah Quran audio recitation (reciter: Mishary Rashid Al-Afasy) when you play audio in the Quran reader. <a href="https://alquran.cloud/cdn" target="_blank">Islamic.network</a></li>
+    <li><strong>everyayah.com</strong> - Provides the optional istiadhah (audhubillah) audio that plays before reciting a surah. <a href="https://everyayah.com/" target="_blank">everyayah.com</a></li>
+    <li><strong>AlQuran Cloud</strong> - Used only as a rare fallback for Quran text if the bundled offline data fails to load. Also queried for ayah audio URL metadata. <a href="https://alquran.cloud/privacy" target="_blank">AlQuran Cloud Privacy</a></li>
+    <li><strong>QuranAPI Pages</strong> - Secondary fallback for Quran text if AlQuran Cloud is unreachable. Rarely used in practice. <a href="https://quranapi.pages.dev/" target="_blank">QuranAPI Pages</a></li>
   </ul>
 
   <hr class="divider">
@@ -181,3 +190,4 @@
 </div>
 </body>
 </html>
+
